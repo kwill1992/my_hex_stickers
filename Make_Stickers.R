@@ -10,7 +10,7 @@
 # https://www.mitchelloharawild.com/blog/user-2018-feature-wall/
 
 
-hex_folder <- "Stickers"
+hex_folder <- "~/Documents/r-studio-and-git/my_hex_stickers/Stickers"
 
 download.file(
     url = "https://github.com/rstudio/hex-stickers/archive/master.zip",
@@ -37,6 +37,8 @@ list.files(path)
 
 library(magick)
 library(purrr)
+
+# This below works.  It just takes a bit to run!!!  Over a minute.
 
 sticker_files <- list.files(path)
 stickers <- file.path(path, sticker_files) %>%
