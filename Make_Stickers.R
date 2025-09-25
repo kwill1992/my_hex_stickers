@@ -51,4 +51,4 @@ stickers <- file.path(path, sticker_files) %>%
     map(image_transparent, "white") %>%
     map(image_trim) %>%
     set_names(sticker_files)
-
+stickers
