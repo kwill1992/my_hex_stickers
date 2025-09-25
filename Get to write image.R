@@ -4,7 +4,7 @@
 source("~/Documents/r-studio-and-git/my_hex_stickers/hexwall/hexwall.R")
 # call hexwall function and assign to "test"
 # this sometimes get an error -- try adjusting sticker_row_size
-test <- hexwall("~/Documents/r-studio-and-git/my_hex_stickers/my_stickers", sticker_row_size = 5, sticker_width = 200)
+test <- hexwall("~/Documents/r-studio-and-git/my_hex_stickers/my_stickers", sticker_row_size = 7, sticker_width = 200)
 test
 
 
