@@ -32,6 +32,27 @@ y <- image_read(x$data$url)
 image_write(y, "~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
 
 
+image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
+xy <- image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
+
+
+library(showtext)
+
+# choose a font from Google Fonts
+font_add_google("Bangers", "bangers")
+font_add_google("Roboto", "rob")
+showtext_auto()
+ft <- "bangers"
+ft1 <- "rob"
+txt <- "black"
+
+# fontawesome fonts (optional - this adds the git logo - download from https://fontawesome.com/)
+font_add("fa-brands", regular = "fonts/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.ttf")
+
+# package name and githu repo
+pkg_name <- "dumpster\nFire"
+git_name <- "doehm/dumpsterFire"
+
 library(cropcircles)
 img_cropped <- hex_crop(
     images = x$data$url,
@@ -39,6 +60,13 @@ img_cropped <- hex_crop(
     border_size = 24
 )
 
+
+library(cropcircles)
+img_cropped <- hex_crop(
+    images = xy,
+    border_colour = "#107e54",
+    border_size = 24
+)
 library(tidyverse)
 library(ggpath)
 library(ggtext)
