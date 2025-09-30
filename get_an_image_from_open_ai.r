@@ -27,7 +27,7 @@ image_read(x$data$url)
 
 # couldn't get this to work
 image_write(x$data$url, "cat_sunset.png")
-
+class(x$data$url)
 
 # now to save to files
 y <- image_read(x$data$url)
