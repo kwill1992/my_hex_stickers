@@ -13,10 +13,12 @@ library(cropcircles)
 # be sure to get Open Ai api and key working as mentioned in the article
 
 # need to add key to environ
-# Sys.setenv(OPENAI_API_KEY = '<your-key-goes-here>')
+Sys.setenv(OPENAI_API_KEY = '<your key here')
+# Need to be correct format or get error later
 
 # test it
 x <- create_image('a cat with wings staring at a sunset')
+x <- create_image("the orion constellation in neon pink")
 # ok, got url as mentioned in the blog
 
 library(magick)
@@ -24,12 +26,12 @@ image_read(x$data$url)
 # that will plot it in viewer
 
 # couldn't get this to work
-image_write(x$data$url, "dumpsterfire.png")
+image_write(x$data$url, "cat_sunset.png")
 
 
 # now to save to files
 y <- image_read(x$data$url)
-image_write(y, "~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
+image_write(y, "~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/orion_in_neon_pink.png")
 
 
 image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
