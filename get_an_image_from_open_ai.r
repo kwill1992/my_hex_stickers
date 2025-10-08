@@ -19,6 +19,7 @@ Sys.setenv(OPENAI_API_KEY = '<your key here')
 # test it
 x <- create_image('a cat with wings staring at a sunset')
 x <- create_image("the orion constellation in neon pink")
+x <- create_image("a logo for a business named RRL which has data nodes in the background")
 # ok, got url as mentioned in the blog
 
 library(magick)
@@ -26,16 +27,16 @@ image_read(x$data$url)
 # that will plot it in viewer
 
 # couldn't get this to work
-image_write(x$data$url, "cat_sunset.png")
+image_write(x$data$url, "rrl.png")
 class(x$data$url)
 
 # now to save to files
 y <- image_read(x$data$url)
-image_write(y, "~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/orion_in_neon_pink.png")
+image_write(y, "~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/rrl_logo.png")
 
 
-image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
-xy <- image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/catwithwingssunset.png")
+image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/rrl_logo.png")
+xy <- image_read("~/Documents/r-studio-and-git/my_hex_stickers/open_ai_generated_images/rrl_logo.png")
 
 
 library(showtext)
